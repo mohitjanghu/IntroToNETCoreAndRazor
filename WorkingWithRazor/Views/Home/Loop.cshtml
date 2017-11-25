@@ -1,0 +1,24 @@
+﻿@model Product[]
+@{
+    ViewData["Title"] = "Using Loops in Razor";
+}
+<h3>Using Foreach loop</h3>
+<div>
+    <table class="table table-bordered table-responsive">
+        <thead><tr><th>Name</th><th>Price</th></tr></thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @($"{item.Price:C}")
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
